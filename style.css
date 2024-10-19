@@ -40,7 +40,7 @@
     position: relative;
 }
 
-.container::after{
+.container ul::after{
     position: absolute;
     content: " ";
     width: 2px;
@@ -146,4 +146,48 @@
 .container ul li:nth-child(even) .circle{
     left: -30px;
     transform: translate(-50%, -50%);
+}
+
+
+/* Responsive CSS */
+@media screen and (max-width: 1224px){
+    .container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 933px){
+    .container{
+        width: 80%;
+        transform: translateX(20px);
+    }
+
+    .container ul::after{
+        left: -30px;
+    }
+
+    .container ul li{
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+    }
+
+    .container ul li:nth-child(odd){
+        transform: translateX(0);
+        text-align: left;
+    }
+
+    .container ul li:nth-child(even){
+        transform: translateX(0);
+    }
+
+    .container ul li:nth-child(odd) .circle{
+        left: -30px;
+        transform: translate(-50%, -50%);
+    }
+
+    .container ul li:nth-child(odd) .date{
+        left: 20px;
+    }
 }
