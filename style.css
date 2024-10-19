@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    background-color: rgb(245, 245, 245);
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
+
+.main .heading{
+    font-size: 27px;
+    font-weight: 500;
+    color: rgb(106, 6, 256);
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.heading::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 3px;
+    left: 50%;
+    bottom: -5px;
+    background: linear-gradient(to right, rgb(106, 6, 256), #9342c9);
+    transform: translateX(-50%);
+}
+
+/* Container CSS */
+.container{
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+.container::after{
+    position: absolute;
+    content: " ";
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to right, rgb(106, 6, 256), #9342c9);
+}
+
+.container ul{
+    list-style: none;
+}
+
+.container ul li{
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    z-index: 999;
+    position: relative;
+}
+
+.container ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    text-align: right;
+}
+
+.container ul li:nth-child(odd) .date{
+    right: 20px;
+}
+
+.container ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.container ul li:last-child{
+    margin-bottom: 0;
+}
+
+.container ul li .title{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(106, 6, 236);
+}
+
+.container ul li p{
+    font-size: 15px;
+    color: #585656;
+    margin: 7px 0;
+    line-height: 23px;
+}
+
+.container ul li a{
+    font-size: 15px;
+    color: rgb(106, 6, 236);
+    text-decoration: none;
+}
+
+.container ul li .date{
+    position: absolute;
+    top: -40px;
+    width: 135px;
+    height: 35px;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(to right, rgb(106, 6, 256), #9342c9);
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+}
+
+.container ul li .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #c481f1cb;
+    position: absolute;
+    top: 0;
+}
+
+.container ul li .circle::after{
+    content: " ";
+    width: 17px;
+    height: 17px;
+    background-color: rgb(106, 6, 256);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container ul li:nth-child(odd) .circle{
+    right: -30px;
+    transform: translate(50%, -50%);
+}
+
+.container ul li:nth-child(even) .circle{
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
